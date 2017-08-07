@@ -5,11 +5,14 @@
 # write out path needed
 class LaunchAgentController
 end
+# setup_and_load()
+# remove_and_unload()
+`
 # !/bin/bash
 
 # write out path needed
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LA=$DIR/../launch_agent
+LA=$DIR/../../lib/launch_agent
 SE=$DIR/../../bin
 
 echo $DIR
@@ -31,3 +34,4 @@ chmod 644 $LA/.tmp/com.example.hello.plist
 cp $LA/.tmp/com.example.hello.plist ~/Library/LaunchAgents/
 
 launchctl load ~/Library/LaunchAgents/com.example.hello.plist
+`
